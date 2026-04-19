@@ -197,7 +197,7 @@ async function submitData() {
 
         odeslatBtn.disabled = true;
         odeslatBtn.textContent = 'Odesílám...';
-        showStatus(''); // Vyčisti status
+        showStatus('');
 
         const response = await fetch(`${API_BASE_URL}?cmd=${CMD_SAVE}`, {
             method: 'POST',
