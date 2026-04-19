@@ -39,7 +39,6 @@ async function fetchUsers() {
         renderUsers();
     } catch (error) {
         console.warn("API zablokováno (pravděpodobně CORS). Načítám záložní uživatele.");
-        // Záložní data, pokud API selže
         const fallbackData = ["Masopust Lukáš", "Molič Jan", "Adamek Daniel", "Weber David"];
         usersData = fallbackData.map((name, index) => ({ id: (index + 1).toString(), name: name }));
         renderUsers();
@@ -71,8 +70,6 @@ function renderUsers() {
     });
 }
 
-
-// Stáhne seznam nápojů, inicializuje počítadla a vykreslí je
 async function fetchDrinks() {
     try {
         const res = await fetch(`${API_BASE_URL}?cmd=${CMD_GET_DRINKS}`);
@@ -83,7 +80,6 @@ async function fetchDrinks() {
         renderDrinks();
     } catch (error) {
         console.warn("API zablokováno (pravděpodobně CORS). Načítám záložní nápoje.");
-        // Záložní data, pokud API selže
         const fallbackDrinks = ["Mléko", "Espresso", "Coffe", "Long", "Doppio+"];
         fallbackDrinks.forEach(drinkType => { drinksCounts[drinkType] = 0; });
         renderDrinks();
@@ -138,7 +134,7 @@ function updateDrinkCount(drinkType, change) {
     }
 }
 
-// Pamatovani Uživatele (Cookies + Local Storage)
+// Pamatovani Uživatele (Cookies+ Local Storage)
 
 const SAVE_USER_KEY = 'vypitoApp_lastUserId';
 
