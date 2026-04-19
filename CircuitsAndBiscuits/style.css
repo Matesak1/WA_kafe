@@ -1,0 +1,160 @@
+:root {
+    --primary-color: #f0f0f0; 
+    --accent-color: #333; 
+    --hover-color: #ddd;
+    --active-color: #bbb;
+    --border-radius: 8px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: white;
+    color: black;
+    padding: 15px;
+}
+
+.app-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.section {
+    margin-bottom: 25px;
+}
+
+.loading {
+    font-style: italic;
+    color: #666;
+}
+
+.users-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.user-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    transition: background 0.2s;
+}
+
+.user-item:hover {
+    background-color: var(--primary-color);
+}
+
+.user-item input {
+    margin-right: 15px;
+    width: 20px;
+    height: 20px;
+}
+
+.user-name {
+    font-size: 1.1rem;
+}
+
+.drinks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.drink-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.drink-name {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.counter-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.2s;
+    user-select: none;
+}
+
+.counter-btn:active {
+    background-color: var(--active-color);
+}
+
+.drink-value {
+    font-size: 1.4rem;
+    font-weight: bold;
+    min-width: 30px;
+    text-align: center;
+}
+
+.actions {
+    text-align: center;
+}
+
+.primary-btn {
+    width: 100%;
+    padding: 18px;
+    background-color: #ddd;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 1px solid #aaa;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: transform 0.1s, background 0.2s;
+}
+
+.primary-btn:active {
+    transform: scale(0.98);
+    background-color: var(--active-color);
+}
+
+.primary-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.status-msg {
+    margin-top: 15px;
+    font-size: 1rem;
+    min-height: 24px;
+}
+.status-success { color: #28a745; }
+.status-error { color: #dc3545; }

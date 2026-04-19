@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Circuits & Biscuits</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-container">
+    <h1>Circuits & Biscuits</h1>
+
+    <section class="section">
+        <h2>Kdo pije?</h2>
+        <div id="users-container" class="users-list">
+            <p class="loading">Načítání uživatelů...</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Co pije?</h2>
+        <div id="drinks-container" class="drinks-list">
+            <p class="loading">Načítání nápojů...</p>
+        </div>
+    </section>
+
+    <div class="actions">
+        <button id="odeslat-btn" class="primary-btn">Odeslat</button>
+        <p id="status-msg" class="status-msg"></p>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
